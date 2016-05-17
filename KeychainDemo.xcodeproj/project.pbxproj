@@ -15,6 +15,7 @@
 		2384AA061CEAC65C00F1055D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2384AA041CEAC65C00F1055D /* LaunchScreen.storyboard */; };
 		2384AA121CEACAE400F1055D /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2384AA0F1CEACAE400F1055D /* SSKeychain.m */; };
 		2384AA131CEACAE400F1055D /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2384AA111CEACAE400F1055D /* SSKeychainQuery.m */; };
+		2384AA161CEB035700F1055D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2384AA151CEB035700F1055D /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		2384AA101CEACAE400F1055D /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
 		2384AA111CEACAE400F1055D /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
 		2384AA141CEACB1B00F1055D /* KeychainDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = KeychainDemo.entitlements; sourceTree = "<group>"; };
+		2384AA151CEB035700F1055D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2384AA161CEB035700F1055D /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +52,7 @@
 		2384A9EA1CEAC65C00F1055D = {
 			isa = PBXGroup;
 			children = (
+				2384AA151CEB035700F1055D /* Security.framework */,
 				2384A9F51CEAC65C00F1055D /* KeychainDemo */,
 				2384A9F41CEAC65C00F1055D /* Products */,
 			);
@@ -332,6 +336,7 @@
 				2384AA0C1CEAC65C00F1055D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
