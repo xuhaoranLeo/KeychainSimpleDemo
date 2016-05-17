@@ -86,22 +86,22 @@ static NSString *kKeychainDeviceId    = @"KeychainDeviceId";
 - (IBAction)searchAllAction:(id)sender {
     NSArray *accounts = [SSKeychain accountsForService:kKeychainService];
     NSLog(@"accounts:\n%@", accounts);
-    [self showMsg:@"看下输出台"];
+    [self showMsg:@"看下控制台输出"];
 }
 
 #pragma mark - private method
 - (NSString *)getDeviceId {
     // 读取设备号
-    NSString *localUUID = [SSKeychain passwordForService:kKeychainService account:kKeychainDeviceId];
-    if (!localUUID) {
+    NSString *localDeviceId = [SSKeychain passwordForService:kKeychainService account:kKeychainDeviceId];
+    if (!localDeviceId) {
         // 保存设备号
-        CFUUIDRef uuid = CFUUIDCreate(NULL);
-        assert(uuid != NULL);
-        CFStringRef uuidStr = CFUUIDCreateString(NULL, uuid);
-        [SSKeychain setPassword:[NSString stringWithFormat:@"%@", uuidStr] forService:kKeychainService account:kKeychainDeviceId];
-        localUUID = [NSString stringWithFormat:@"%@", uuidStr];
+        CFUUIDRef deviceId = CFUUIDCreate(NULL);
+        assert(deviceId != NULL);
+        CFStringRef deviceIdStr = CFUUIDCreateString(NULL, deviceId);
+        [SSKeychain setPassword:[NSString stringWithFormat:@"%@", deviceIdStr] forService:kKeychainService account:kKeychainDeviceId];
+        localDeviceId = [NSString stringWithFormat:@"%@", deviceIdStr];
     }
-    return localUUID;
+    return localDeviceId;
 }
 
 - (void)showMsg:(NSString *)msg {
