@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  这里输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zpE-la-AtP">
+                                <rect key="frame" x="20" y="121" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="f39-hs-Snf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Rkk-IZ-hKX"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  输入一次后, 将自动填充密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6qo-rK-Huc">
+                                <rect key="frame" x="20" y="211" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="C2a-4K-f5D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ckx-al-myf"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxV-ly-kBV">
+                                <rect key="frame" x="270" y="301" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="C9k-hE-QSx"/>
+                                    <constraint firstAttribute="height" constant="30" id="fy6-Ab-kh5"/>
+                                </constraints>
+                                <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bNy-v2-pjV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OZ-ET-l6K">
+                                <rect key="frame" x="250" y="50" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="0PX-H3-U4z"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="GvU-bc-7IA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="fWI-2Q-M3D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUA-QK-4u8">
+                                <rect key="frame" x="250" y="520" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RME-57-WY4"/>
+                                    <constraint firstAttribute="width" constant="100" id="sdl-27-WFF"/>
+                                </constraints>
+                                <state key="normal" title="查询所有账号"/>
+                                <connections>
+                                    <action selector="searchAllAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lof-UK-8di"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbB-Br-bdQ">
+                                <rect key="frame" x="250" y="351" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="nBs-gR-hvh"/>
+                                    <constraint firstAttribute="height" constant="30" id="vdx-sQ-Y2V"/>
+                                </constraints>
+                                <state key="normal" title="清空本地密码"/>
+                                <connections>
+                                    <action selector="clearAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SXN-H7-kU5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pxV-ly-kBV" firstAttribute="top" secondItem="6qo-rK-Huc" secondAttribute="bottom" constant="50" id="3AJ-eN-s6f"/>
+                            <constraint firstItem="6qo-rK-Huc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Evr-Bc-kX2"/>
+                            <constraint firstItem="zpE-la-AtP" firstAttribute="top" secondItem="8OZ-ET-l6K" secondAttribute="bottom" constant="50" id="I6C-pH-ufv"/>
+                            <constraint firstItem="8OZ-ET-l6K" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="IZ3-Nn-K3f"/>
+                            <constraint firstItem="6qo-rK-Huc" firstAttribute="top" secondItem="zpE-la-AtP" secondAttribute="bottom" constant="50" id="PM3-64-qNC"/>
+                            <constraint firstAttribute="trailing" secondItem="6qo-rK-Huc" secondAttribute="trailing" constant="20" id="Pol-jV-msy"/>
+                            <constraint firstItem="tbB-Br-bdQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X6m-hR-UKa"/>
+                            <constraint firstItem="8OZ-ET-l6K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aEH-dk-uYK"/>
+                            <constraint firstItem="JUA-QK-4u8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fIk-Nh-foD"/>
+                            <constraint firstItem="tbB-Br-bdQ" firstAttribute="top" secondItem="pxV-ly-kBV" secondAttribute="bottom" constant="20" id="fv2-pV-DPe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JUA-QK-4u8" secondAttribute="bottom" constant="50" id="ilT-ga-HAJ"/>
+                            <constraint firstAttribute="trailing" secondItem="zpE-la-AtP" secondAttribute="trailing" constant="20" id="jMB-0H-XDk"/>
+                            <constraint firstItem="pxV-ly-kBV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k0o-v6-z98"/>
+                            <constraint firstItem="zpE-la-AtP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="oyG-HP-ezY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accountTextField" destination="zpE-la-AtP" id="JFL-n8-5rD"/>
+                        <outlet property="passwordTextField" destination="6qo-rK-Huc" id="j0w-Hs-th1"/>
+                        <outlet property="uuidLabel" destination="8OZ-ET-l6K" id="6md-lo-mp6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="394"/>
+        </scene>
+    </scenes>
+</document>
